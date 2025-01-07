@@ -1,0 +1,299 @@
+body{
+  background-color: green;
+}
+
+.logoutbutton{
+  /* position: absolute; */
+  font-size: 15px;
+  top: 3px;right: 10px;
+  width: fit-content;
+  padding: 5px 10px; 
+  background-color: red;color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;overflow: hidden;
+}
+.logoutbutton::after{
+    content: "";
+    height: 120%;width: 0%; 
+    position: absolute; top: -15%; left: -15%;
+    border-radius: 25px; transform: rotate(30deg); box-shadow: 1px 1px 9px 4.5px white;
+  }
+  .logoutbutton:hover::after{animation: Move_white_light 2s infinite;}
+
+  @keyframes Move_white_light{0%{left: -15%;}100%{left: 115%;}}
+
+
+.For_in_farmer_logout{
+  display: flex;justify-content: center;align-items: center; gap: 20px;
+}
+
+.FarmerDeatils{
+  border-bottom: 2px solid green;
+  border-top: 2px solid green;
+
+  min-height: 310px; max-height: fit-content; width: 100%;padding: 10px 10px 10px 10px;
+  display: flex;justify-content: space-around;align-items: center;
+  border-radius: 10px solid black;
+  background-color: #fff;
+}
+.FarmerDeatilsOne{
+  height: 100%;
+  width: 250px;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);overflow: hidden;
+}
+.FarmerProfilePic{
+  height: 265px;width: 250px;
+}
+.FarmerProfileName{
+  font-size: 25px;text-align: center;font-weight: 700;color: green;
+}
+.FarmerProfilePic img{
+  height: 100%;width: 100%;
+}
+.FarmerDeatilsTwo{
+  height: 100%;
+  width: calc(100% - 600px);
+  
+  background-color: rgb(255, 255, 255);
+  font-size: 25px;
+  padding: 10px;
+  padding-left: 50px;
+  border-radius: 20px;
+}
+.FarmerDeatilsTableHead{
+  color: green;font-weight: 800;
+}
+.FarmerDeatilsTableHead::after {
+  content: ":";
+  margin-left: 5px; /* Optional spacing */
+}
+.FarmerDeatilsTableData{
+  padding-left: 10px;
+}
+.FarmerDeatilsThree{
+  height: 290px;
+  width: 250px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);overflow: hidden;
+}
+.FarmerProfileSafty{
+  height: 100%;width: 100%;
+}
+
+
+
+
+
+
+/*  */
+
+.VendibleSection{
+  height: fit-content;width: 96%;
+  margin: 0 2%;
+  padding: 10px; 
+  border-radius: 10px;
+  /* background:linear-gradient(to bottom right, #fcfde3, #9cfcc4); */
+  background-color: rgb(180, 252, 179) ;
+
+
+  display: flex;justify-content: start;align-items: center;flex-direction: column;
+  gap: 15px;
+}
+.SaleHeading , .VendHeading{
+  font-size: 30px;color: rgb(33, 174, 127);
+}
+.SaleItemsList{
+  height: fit-content;width: 96%;
+  display: flex;justify-content: start;align-items: center;flex-direction: column;
+  gap: 10px;
+}
+
+.SaleItemObj{
+  height: 110px;width: 97%;
+  display: flex;justify-content: space-between;align-items: center;
+  padding: 5px 1%;
+  border: 2px solid rgb(33, 174, 127);border-radius: 10px; background-color: #d6fbd6;
+  /* flex-wrap: wrap; */
+}
+.SaleItemImg{
+  height: 90px;width: 150px; 
+}
+.SaleItemImg img{height: 100%;width: 100%;border-radius: 10px;}
+.SaleItemDetilsName{font-size: 25px;width: 150px;}
+.SaleItemDetilsPrize{color: green;font-size: 20px;width: 120px;}
+.SaleItemTotalQuantity{
+  min-width: 70px;
+  /* background-color: blue; */
+  font-size: 25px;color: green;
+}
+.SaleItemTotalCost{
+  min-width: 100px;
+  /* background-color: blue; */
+  font-size: 25px;color: red;
+}
+.SaleItemRemove{
+  font-size: 20px;
+}
+.SaleItemRemove:hover{
+  color: red;
+}
+.ButtonofAddSaleItem{
+    font-size: 25px;font-weight: 700;
+    padding: 10px 50px;
+    border: 2px solid orange;border-radius: 20px;
+    background:linear-gradient(to bottom right, #eaef5d, #4BAE74);
+    cursor: pointer;
+}
+
+
+.VendSection{
+  height: fit-content;width: 96%;
+  margin: 0 2%;
+  padding: 10px; 
+  border-radius: 10px;
+  background-color: rgb(180, 252, 179) ;
+  display: flex;justify-content: start;align-items: center;flex-direction: column;
+  gap: 15px;
+}
+.VendHeading{
+  font-size: 30px;color: rgb(33, 174, 127);
+}
+
+.ItemObj{
+  height: 110px;width: 97%;
+  display: flex;justify-content: space-between;align-items: center;
+  padding: 5px 1%;
+  border: 2px solid rgb(33, 174, 127);border-radius: 10px; background-color: #d6fbd6;
+  /* flex-wrap: wrap; */
+}
+.pr{position: relative;}
+.soldlogo{
+  position: absolute;
+  right: 0;bottom: 0;
+  height: 90px;width: 150px;
+}
+.soldlogo img{height: 100%;width: 100%;}
+
+
+
+.userDeatils {
+  min-width: 200px;
+  max-width: 200px;
+  height: 90px;margin-left: 5px;
+  overflow: auto;scrollbar-color: #e179f9 transparent;scrollbar-width:thin;
+  word-wrap: break-word;
+  display: flex;justify-content: start;align-items: start;flex-direction: column;
+}
+.ProdectData {
+  width: fit-content;
+}
+
+
+
+.ProdectData{
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+}
+.Prodect_Name{
+  font-size: 25px;width: 150px;
+}
+.Prodect_Price{
+  color: green;font-size: 20px;width: 120px;
+}
+.Prodect_Quantity{
+  min-width: 70px;
+  /* background-color: blue; */
+  font-size: 24px;color: green;
+}
+.Prodect_Total{
+  font-size: 20px;
+}
+.DeliveryButnR{
+  background-color: green;color: white;
+  padding: 10px 15px;
+  border-radius: 10px;cursor: pointer;
+}
+
+.DeliveryButnC{
+  color: green;font-weight: bolder;font-size: 20px;text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1000px) {
+  .FarmerDeatils{
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .FarmerDeatilsTwo{
+    min-width: fit-content;
+  }
+  .FarmerDeatilsThree{display: none;}
+}
+
+@media screen and (min-width:1111px) {
+  .SaleItemObj{width: 1000px;}
+}
+
+@media screen and (max-width:900px) {
+  .ProdectData{
+    flex-direction: column;
+  }
+  .userDeatils{
+    min-width: 150px;
+    max-width: 150px;
+  }
+}
+
+@media screen and (max-width:700px) {
+.SaleItemsList{
+  display: flex;justify-content: space-around;align-items: start;
+  flex-direction: row;
+  flex-wrap: wrap;
+} 
+.SaleItemObj{
+  height: fit-content;width: 200px;
+  flex-direction: column;gap: 10px;
+}
+.SaleItemDetilsName ,.SaleItemDetilsPrize, .SaleItemTotalCost{
+  text-align: center;
+}
+.userDeatils{
+  min-width: 180px;
+  text-align: center;
+  display: flex;justify-content: center;align-items: center;
+}
+.ProdectData{
+flex-direction: column;
+text-align: center;
+align-items: center;
+}
+
+}
+
+@media screen and (max-width:700px) {
+td{
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+}

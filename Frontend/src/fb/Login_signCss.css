@@ -1,0 +1,288 @@
+.daj{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.Fbase{
+  width:100%;
+  height:100svh;
+  background:linear-gradient(to bottom right, #eaef5d, #4BAE74);
+}
+.Center{
+  width:95%;
+  height:95%;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 1px 1px 2px 2px rgb(61, 61, 61,0.7);
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.Click{
+  width:10%;
+  height:10%;
+  background:linear-gradient(gold,goldenrod);
+  border-radius: 40px;
+  color:white;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.Rmain {
+position: relative; /* Make .Rmain relative to enable absolute positioning of its children */
+overflow: hidden;
+width: 50%;
+height: 90%;
+border: 5px solid #4BAE74;
+border-radius: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.curves {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 30%;
+display: flex;
+flex-direction: row;
+z-index: 1;
+}
+
+.c1, .c2, .c3, .c4, .c5 {
+background: linear-gradient(to bottom right, #eaef5d, #4BAE74);
+border-bottom-left-radius: 100%;
+border-bottom-right-radius: 100%;
+}
+
+.c1 { width: 20%; }
+.c2 { width: 30%; height: 80%; }
+.c3 { width: 35%; height: 90%; }
+.c4 { width: 22%; height: 85%; }
+
+.Rcenter , .Rcenter1 {
+position: absolute;
+z-index: 2;
+width: 95%;
+height: 90%;
+background-color: rgba(128, 128, 128, 0.2);
+flex-direction: column;
+justify-content: space-evenly;
+}
+
+.row , .row1 , .mrow{
+position: relative; 
+overflow: hidden; 
+width: 95%;
+height: 10%;
+display: flex;
+flex-direction: row;
+color: black;
+font-size: 1.3rem;
+/* justify-content: space-around; */
+z-index: 1;
+}
+.row, .mrow{
+background-color: white; 
+}
+.row1{
+/* background-color: plum; */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+/* button:hover{
+background: linear-gradient(to bottom right, #eaef5d, #4BAE74); 
+color:white;
+} */
+
+
+.row::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%; 
+height: 100%; 
+background: linear-gradient(to bottom right, #eaef5d, #4BAE74); 
+z-index: -1; 
+transform: scale(0); 
+transition: transform 0.5s ease; 
+}
+
+.row:hover::before {
+transform: scale(1); 
+}
+
+.row:hover {
+box-shadow: none;
+color:white;
+}
+
+
+
+.dname{
+width:28%;
+/* background-color: #4BAE74; */
+}
+.dcolon{
+width:2%;
+/* background-color: white; */
+}
+.detail{
+width:70%;
+/* background-color: #eaef5d; */
+}
+.detail input {
+width: 100%;
+padding: 5px;
+height:100%;
+box-sizing: border-box;
+outline: none;
+border: none;
+}
+
+.detail input:focus {
+background-color: #e0e0e0; 
+}
+
+
+.detail1{
+width:70%;
+/* background-color: #eaef5d; */
+}
+.detail1 input {
+width: 100%;
+padding: 16px;
+height:100%;
+box-sizing: border-box;
+outline: none;
+border: none;
+}
+
+.detail1 input:focus {
+background-color: #e0e0e0; 
+}
+
+
+.error {
+color: red;
+font-size: 0.9rem;
+text-align: center;
+}
+
+.message {
+color: green;
+font-size: 1rem;
+text-align: center;
+}
+
+.TL2{
+width:15%;
+font-size: 1.2rem;
+/* background-color: paleturquoise; */
+
+}
+.button{
+height:50%;
+}
+.row:hover{
+box-shadow: 1px 1px 2px 2px black;
+}
+@media only screen and (min-width: 1200px)
+{
+.TL2{
+  font-size: 1.2rem;
+}
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px){
+.row{
+  font-size: 1rem;
+}
+.Rmain {
+  width: 60%;
+}
+.TL2 {
+  font-size: 1rem;
+}
+}
+
+@media only screen and (min-width: 500px) and (max-width: 800px){
+.row{
+  font-size: 0.9rem;
+}
+.Rmain {
+  width: 70%;
+}
+.TL2{
+  font-size: 0.9rem;
+}
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px){
+.row{
+  font-size: 0.8rem;
+}
+.Rmain {
+  width: 80%;
+}
+.Tl2{
+  display:flex;
+  justify-content: start;
+  align-items: end;
+  width:40%;
+  font-size: 0.8rem;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+/*  */
+.buttonsforSignup{
+  height: 100px;width: 95%;
+  display: flex;justify-content: space-around;align-items: center;flex-direction: column;
+  /* background-color: #fff; */
+}
+.buttonsSIGNUP{
+  padding: 5px 150px;
+  font-size: 20px;font-weight: 700;
+  /* background: linear-gradient(to bottom right, #eaef5d, #4BAE74);  */
+  background-color: green !important;
+  color: rgb(255, 255, 255) !important;
+  border: 1px solid gold;border-radius: 10px !important;
+  position: relative;overflow: hidden;
+}
+.buttonsSIGNUP::after{
+  content: "";
+  height: 120%;width: 0%; 
+  position: absolute; top: -15%; left: -20%;
+  border-radius: 25px; transform: rotate(30deg); box-shadow: 1px 1px 9px 4.5px white;
+}
+.buttonsSIGNUP:hover::after{animation: Move_white_light 2s infinite;}
+@keyframes Move_white_light{0%{left: -15%;}100%{left: 115%;}}
+
+
+
+
+/*  */
+
+.loginHeader{
+  height: 80px;width: 100%;padding: 0 5%;
+  display: flex;justify-content: space-between;align-items: center;
+  /* background:linear-gradient(to right,yellow 40% ,green ); */
+  background: linear-gradient(to top right, #eaef5d, #4BAE74);
+} 
+.loginHeaderImg{
+  height: 100%;width: 80px;
+}
+.loginHeaderImg img{height: 100%; width: 100%;border-radius: 50%;}
+.loginHeaderCont{font-size: 40px;font-weight: 600;color: yellow;}

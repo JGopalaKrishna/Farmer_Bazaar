@@ -1,0 +1,815 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100svh;
+    width: 100%;
+    /* background-color:#ECECEC; */
+    background: linear-gradient(to bottom right, #eaef5d, #4BAE74) !important;
+}
+.main{ 
+     /* width: 98.7%; */
+     width: 100%;
+      height: 70px; 
+     display: flex;
+     justify-content:center;
+     align-items: center;
+     /* background-color: white; */
+    background: linear-gradient(to top right, #eaef5d, #4BAE74);
+     color: black;
+     padding: 10px ;
+     position: relative;
+     z-index: 1;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 1px;
+    position: absolute;
+    left: 1%;
+   
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    /* margin-right: px; */
+    padding: 5px;
+    border-radius: 50%;
+} 
+
+.logo span {
+    /* font-size: 32px; */
+    font-size: 42px;
+    font-weight: 550;
+    /* color:#31CF60; */
+    color:#ffffff;
+}
+.search{
+    position: absolute;
+    left: 24.5%;
+    top: 30%;
+    height: 40px;
+    width: 350px;
+    border: 2px solid hsl(138, 62%, 50%);
+    border-radius: 7px;
+    /* margin-top: 5px; */
+    font-size: 20px;
+   
+}
+::placeholder{
+    color: #C3C4C9;
+    font-size: 25px;
+}
+.seicon{
+    font-size: 25px;
+    color: #C3C4C9;
+    position:absolute;
+    left: 25.5%;
+    top: 35%;
+    margin-top: 4px;
+    z-index: 1;
+}
+.navoptions{
+    display: flex;
+    width: fit-content;
+    height: fit fit-content;
+}
+.home{
+    font-size: 25px;
+    position: absolute;
+    left: 52%;
+    top:30%;
+    cursor: pointer;
+}
+.txthome{
+    position:absolute;
+    bottom:10%;
+    left: 51.5%;
+    font-weight: 550;
+    cursor: pointer;
+}
+.bag{
+    font-size: 25px;
+    position: absolute;
+    left: 57%;
+    top:30%;
+    cursor: pointer;
+}
+.products{
+    position:absolute;
+    bottom:10%;
+    left: 56%;
+    cursor: pointer;
+}
+.becomeseller{
+    width: 220px;
+    height: 50px;
+    /* background-color: #DEE1E6; */
+    background-color: #ffffff;
+    position: absolute;
+    right: 23%;
+    bottom: 10%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 1s;
+    overflow: hidden;
+}
+.becomeseller:hover {
+  background-color: #31CF60;
+  transition: all 1s;
+}
+
+
+
+
+
+.becomeseller:hover .seller{
+  color: white;
+  transition: all 1s;
+}
+.becomeseller:hover .becomeaseller{
+    color: white;
+    transition: all 1s;
+}
+.seller{
+    font-size: 25px;
+    color:#00A836;
+    position: relative;
+    left: 5%;
+    top:25%;
+    font-weight: 600;
+}
+
+.becomeaseller{
+    font-size: 20px;
+    position: relative;
+    left: 10%;
+    bottom: -15%;
+    font-weight: 800;
+    color: #00A836;
+}
+.card{
+    width: 100px;
+    height: 50px;
+    /* background-color: #DEE1E6; */
+    background-color: #ffffff;
+    position: absolute;
+    right: 14%;
+    bottom: 10%;
+    border-radius: 5px;
+    cursor: pointer;overflow: hidden;
+}
+.card:hover{
+    background-color: #00A836;
+    transition: all 1s;
+}
+.card:hover .iconcard{
+    color: white;
+    transition: all 1s;
+}
+.card:hover .txtcard{
+    color:white;
+    transition: all 1s;
+}
+.iconcard{
+    font-size: 25px;
+    color:#00A836;
+    position: relative;
+    left: 10%;
+    top:25%;
+    font-weight: 600;
+}
+.txtcard{
+    font-size: 20px;
+    position: relative;
+    left: 17%;
+    bottom: -15%;
+    font-weight: 800;
+    color: #00A836;
+}
+.login{
+    width: fit-content;
+    height: 50px;
+    padding:  5px 10px;
+    /* background-color:#00A836; */
+    background-color: #fff;
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+    border-radius: 5px;
+    cursor: pointer;overflow: hidden;
+}
+.login:hover{
+    /* background-color: #DEE1E6; */
+    /* background-color: #ffffff; */
+    background-color: #00A836;
+    transition: all 1s;
+}
+.iconlogin{
+    font-size: 18px;
+    color:#00A836;
+    position: relative;
+    left: 0%;
+    top:30%;
+    font-weight: 600;
+}
+.login:hover .iconlogin{
+    color:white;
+    transition: all 1s;
+}
+.txtlogin{
+    font-size: 22px;
+    position: relative;
+    left: 0%;
+    bottom: -25%;
+    font-weight: 800;
+    color:#00A836;
+}
+.login:hover .txtlogin{
+    color: white;
+    transition: all 1s;
+}
+@media (max-width: 1350px){
+    .logo span {
+        font-size: 28px;
+    }
+    .search{
+        position: absolute;
+        left: 24%;
+        height: 40px;
+        width: 340px;
+        border: 2px solid hsl(138, 62%, 50%);
+        border-radius: 7px;
+        margin-top: 5px;
+        font-size: 20px;
+        top: 25%;
+    }
+    .seicon{
+        font-size: 25px;
+        color: #C3C4C9;
+        position:absolute;
+        left: 25%;
+        top: 35%;
+        margin-top: 4px;
+        z-index: 1;
+    }
+    .home{
+        font-size: 22px;
+        position: absolute;
+        left: 52%;
+        top:30%;
+        cursor: pointer;
+    }
+    .bag{
+        font-size: 22px;
+        position: absolute;
+        left: 56%;
+        top:30%;
+        cursor: pointer;
+    }
+    .products{
+        position:absolute;
+        bottom:10%;
+        left: 55%;
+        cursor: pointer;
+        font-size: 14px;
+    }
+}
+@media (max-width: 1255px){
+    .logo span {
+        font-size: 25px;
+    }
+    .search{
+        position: absolute;
+        left: 24%;
+        height: 40px;
+        width: 300px;
+        border: 2px solid hsl(138, 62%, 50%);
+        border-radius: 7px;
+        margin-top: 5px;
+        font-size: 20px;
+       
+    }
+    .home{
+        font-size: 20px;
+        position: absolute;
+        left: 52%;
+        top:30%;
+        cursor: pointer;
+    }
+    .bag{
+        font-size: 20px;
+        position: absolute;
+        left: 56%;
+        top:30%;
+        cursor: pointer;
+    }
+    .products{
+        position:absolute;
+        bottom:15%;
+        left: 54.5%;
+        cursor: pointer;
+        font-size: 15px;
+    }
+    .txthome{
+        position:absolute;
+        bottom:15%;
+        left: 51%;
+        font-weight: 550;
+        cursor: pointer;
+        font-size: 15px;
+    }
+    .seicon{
+        font-size: 25px;
+        color: #C3C4C9;
+        position:absolute;
+        left: 25%;
+        margin-top: 4px;
+        z-index: 1;
+    }
+    .becomeseller{
+        width: 200px;
+        height: 50px;
+        position: absolute;
+        right: 23%;
+        bottom: 10%;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+@media (max-width: 1152px){
+    .logo span {
+        display: none;
+    }
+    .search{
+        position: absolute;
+        left: 15%;
+        height: 40px;
+        width: 300px;
+        border: 2px solid hsl(138, 62%, 50%);
+        border-radius: 7px;
+        margin-top: 5px;
+        font-size: 20px;
+       
+    }
+    .home{
+        font-size: 40px;
+        position: absolute;
+        left: 50%;
+        top:26%;
+        cursor: pointer;
+    }
+    .bag{
+        font-size: 40px;
+        position: absolute;
+        left: 60%;
+        top:25%;
+        cursor: pointer;
+    }
+    .products{
+        display: none;
+    }
+    .txthome{
+        display: none;
+    }
+    .seicon{
+        font-size: 25px;
+        color: #C3C4C9;
+        position:absolute;
+        left: 16%;
+        
+        margin-top: 4px;
+        z-index: 1;
+    }
+    .becomeseller{
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        left: 70%;
+        bottom: 10%;
+        border-radius: 5px;
+        cursor: pointer;
+        border-radius: 50%;
+        padding: 10px;
+    }
+    .becomeaseller{
+       display: none;
+    }
+    .seller{
+        font-size: 30px;
+        color:#00A836;
+        position: relative;
+        left: 13%;
+        top:10%;
+        font-weight: 600;
+    }
+    .txtcard{
+       display: none;
+    }
+    .card{
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        left: 80%;
+        bottom: 10%;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 50%;
+    }
+    .iconcard{
+        font-size: 32px;
+        color:#00A836;
+        position: relative;
+        left: 16%;
+        top:19%;
+        font-weight: 600;
+    }
+    .login{
+        width: 60px;
+        height: 60px;
+        /* background-color:#31CF60; */
+        position: absolute;
+        right: 4%;
+        bottom: 10%;
+        border-radius: 5px;
+        cursor: pointer;
+        border-radius: 50%;
+        padding: 5px;
+    }
+    .iconlogin{
+        font-size: 30px;
+        /* color:white; */
+        position: relative;
+        left: 17%;
+        top:18%;
+        font-weight: 600;
+    }
+    .txtlogin{
+        display: none;
+    }
+}
+@media (max-width: 864px){
+    .logo span {
+        display: none;
+    }
+    .search{
+        position: absolute;
+        left: 13%;
+        height: 40px;
+        width: 300px;
+        border: 2px solid hsl(138, 62%, 50%);
+        border-radius: 7px;
+        margin-top: 5px;
+        font-size: 20px;
+       
+    }
+    .home{
+        font-size: 32px;
+        position: absolute;
+        left: 53%;
+        top:30%;
+        cursor: pointer;
+    }
+    .bag{
+        font-size: 32px;
+        position: absolute;
+        left: 63%;
+        top:30%;
+        cursor: pointer;
+    }
+    .products{
+        display: none;
+    }
+    .txthome{
+        display: none;
+    }
+    .seicon{
+        font-size: 25px;
+        color: #C3C4C9;
+        position:absolute;
+        left: 14%;
+        
+        margin-top: 4px;
+        z-index: 1;
+    }
+    .becomeseller{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: 73%;
+        bottom: 15%;
+        border-radius: 5px;
+        cursor: pointer;
+        border-radius: 50%;
+        /* padding: 10px; */
+    }
+    .becomeaseller{
+       display: none;
+    }
+    .seller{
+        font-size: 25px;
+        color:#00A836;
+        position: relative;
+        left: -5%;
+        top:-10%;
+        font-weight: 600;
+    }
+    .txtcard{
+       display: none;
+    }
+    .card{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: 83%;
+        bottom: 15%;
+        border-radius: 5px;
+        cursor: pointer;
+        /* padding: 5px; */
+        border-radius: 50%;
+    }
+    .iconcard{
+        font-size: 25px;
+        color:#00A836;
+        position: relative;
+        left: 5%;
+        top:15%;
+        font-weight: 600;
+    } 
+    .login{
+        width: 40px;
+        height: 40px;
+        /* background-color:#31CF60; */
+        position: absolute;
+        right: 3%;
+        bottom: 18%;
+        border-radius: 5px;
+        cursor: pointer;
+        border-radius: 50%;
+        /* padding: 5px; */
+    }
+    .iconlogin{
+        font-size: 20px;
+        /* color:white; */
+        position: relative;
+        left: 17%;
+        top:15%;
+        font-weight: 600;
+    }
+    .txtlogin{
+        display: none;
+    }
+}
+.mobileicon{
+    font-size: 30px;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    
+}
+.mobilemenu{
+    background-color: white;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 90px;  
+    height: 250px;
+    width: 150px;
+    right: 10px;
+    overflow: hidden;
+    transition: all 1s;
+}
+.mbhome{
+    font-size: 22px;
+    position: absolute;
+    left: 21%;
+    top:3%;
+    cursor: pointer;
+}
+.mbtxthome{
+    position:absolute;
+    top:4%;
+    left: 42.5%;
+    font-weight: 550;
+    font-size: 18px;
+    cursor: pointer;
+}
+.mbbag{
+    font-size: 22px;
+    position: absolute;
+    left: 20%;
+    top:20%;
+    cursor: pointer;
+}
+.mbproducts{
+    position:absolute;
+    top:20%;
+    left: 40.5%;
+    font-weight: 550;
+    font-size: 18px;
+    cursor: pointer;
+}
+.mbseller{
+    font-size: 22px;
+    /* color: #00A836; */
+    position: absolute;
+    left: 20%;
+    top:37%;
+    cursor: pointer;
+}
+.mbbecomeaseller{
+    font-size: 20px;
+    position: relative;
+    left: 30%;
+    bottom: -15%;
+    top: -40%;
+    font-weight: 800;
+    /* color: #00A836; */
+    cursor: pointer;
+}
+.mbiconcard{
+    font-size: 25px;
+    /* color:#00A836; */
+    position: absolute;
+    left: 20%;
+    top:57%;
+    font-weight: 600;
+    cursor: pointer;
+}
+.mbtxtcard{
+    position:absolute;
+    top:58%;
+    left: 40.5%;
+    font-weight: 550;
+    /* color: #00A836; */
+    font-size: 18px;
+    /* color: blueviolet; */
+    cursor: pointer;
+}
+.mbiconlogin{
+    font-size: 20px;
+    color:black;
+    position: absolute;
+    left: 22%;
+    top:75%;
+    font-weight: 600;
+    cursor: pointer;
+}
+.mbtxtlogin{
+    position:absolute;
+    top:75%;
+    left: 40.5%;
+    font-weight: 550;
+  
+    font-size: 18px;
+    /* color: blueviolet; */
+    cursor: pointer;
+}
+.wrong{
+    font-size: 25px;
+    position: absolute;
+    top: 220px;
+    left: 5%;
+    cursor: pointer;
+}
+@media (max-width:750px){
+    .navoptions{
+        display: none;
+    }
+    .mobileicon{
+        display: block;
+        position: absolute;
+        right: 4%;
+    }
+    .logo span {
+        display: block;
+    }
+    .search{
+        position: absolute;
+        left: 47%;
+        width: 250px;
+    }
+    .seicon{
+        position: absolute;
+        left: 49%;
+    }
+}
+@media (max-width:565px){
+    .logo span {
+        display: none;
+    }
+    .search{
+        position: absolute;
+        left: 32%;
+        width: 250px;
+        height: 35px;
+        width: 200px;
+    }
+    .seicon{
+        position: absolute;
+        left: 35%;
+        top: 32%;
+    }
+}
+/* @media (max-width:490px){
+    .logo span {
+        font-size: 20px;
+    }
+    .search{
+        position: absolute;
+        left: 67%;
+        width: 250px;
+        height: 35px;
+        width: 40px;
+    }
+    .seicon{
+        position: absolute;
+        left: 69%;
+        top: 32%;
+    }
+} */
+@media (max-width:395px){
+    .search{
+        position: absolute;
+        left: 30%;
+        
+        height: 35px;
+        width: 200px;
+        /* border: none; */
+    }
+    .seicon{
+        position: absolute;
+        left: 34%;
+        top: 32%;
+    }
+    .mobileicon{
+        display: block;
+        position: absolute;
+        right: 4%;
+    }
+}
+@media (max-width:333px){
+    .search{
+        position: absolute;
+        left: 30%;
+        
+        height: 35px;
+        width: 150px;
+        /* border: none; */
+    }
+    .seicon{
+        position: absolute;
+        left: 35%;
+        top: 32%;
+    }
+    .mobileicon{
+        display: block;
+        position: absolute;
+        right: 10%;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Animations */
+
+.becomeseller::after{
+  content: "";
+  height: 120%;width: 0%; 
+  position: absolute; top: -15%; left: -15%;
+  border-radius: 25px; transform: rotate(30deg); box-shadow: 1px 1px 9px 4.5px white;
+}
+.becomeseller:hover::after{animation: Move_white_light 2s infinite;}
+
+.card::after{
+    content: "";
+    height: 120%;width: 0%; 
+    position: absolute; top: -15%; left: -15%;
+    border-radius: 25px; transform: rotate(30deg); box-shadow: 1px 1px 9px 4.5px white;
+  }
+.card:hover::after{animation: Move_white_light 2s infinite;}
+
+.login::after{
+    content: "";
+    height: 120%;width: 0%; 
+    position: absolute; top: -15%; left: -15%;
+    border-radius: 25px; transform: rotate(30deg); box-shadow: 1px 1px 9px 4.5px white;
+  }
+  .login:hover::after{animation: Move_white_light 2s infinite;}
+
+
+
+
+
+  @keyframes Move_white_light{0%{left: -15%;}100%{left: 115%;}}

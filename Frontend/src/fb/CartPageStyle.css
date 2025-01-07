@@ -1,0 +1,155 @@
+*{margin: 0px;padding: 0px;}
+.TotalCartPage{
+  min-height: 500px; max-height: fit-content;width: 100%; 
+  margin-top: 20px;cursor: pointer;
+  display: flex;justify-content: space-around;align-self: start;
+} 
+.CartItemsShow{ 
+  height: fit-content;width: 65%;
+  padding: 10px; 
+  border-radius: 10px; 
+  background-color: rgb(180, 252, 179);
+  display: flex;justify-content: start;align-items: center;flex-direction: column;
+  gap: 15px;
+}
+.CartHeading{
+  font-size: 30px;color: rgb(33, 174, 127);
+}
+.CartItemsList{
+  height: fit-content;width: 96%;
+  display: flex;justify-content: start;align-items: center;flex-direction: column;
+  gap: 10px;
+}
+.CartItemObj{
+  height: 110px;width: 97%;
+  display: flex;justify-content: space-between;align-items: center;
+  padding: 5px 1%;
+  border: 2px solid rgb(33, 174, 127);border-radius: 10px; background-color: #d6fbd6;
+  flex-wrap: wrap;
+}
+.CartItemImg{
+  height: 90px;width: 150px; 
+}
+.CartItemImg img{height: 100%;width: 100%;border-radius: 10px;}
+.CartItemDetils{
+  height: 100px;width: 200px;
+  display: flex;justify-content: center;align-items: start;flex-direction: column;
+}
+.CartItemDetilsName{font-size: 25px;}
+.CartItemDetilsPrize{color: green;font-size: 20px;}
+.CartItemCount{
+  height: 30px;width: 150px;
+  display: flex;justify-content: space-evenly;align-items: center;
+  font-size: 25px;font-weight: bold;
+}
+.CartItemCountNegative,.CartItemCountPositive{
+  height: 100%;width: 30%;
+  background-color: rgb(40, 246, 44);color: white;
+  display: flex;justify-content: center;align-items: center;
+}
+.CartItemCountNegative{border-radius: 5px 0 0 5px;}
+.CartItemCountPositive{border-radius: 0 5px 5px 0;}
+.CartItemCountNumber{
+  height: 100%;width: 40%;
+  display: flex;justify-content: center;align-items: center;
+  background-color: #fff;color: #000;
+}
+.CartItemTotalCost{
+  min-width: 80px;max-width: fit-content;
+  /* background-color: blue; */
+  font-size: 25px;color: red;
+}
+.CartItemRemove{
+  font-size: 20px;
+}
+.CartItemRemove:hover{
+  color: red;
+}
+
+
+/*  */
+
+.CartItemsPay{
+  /* height: 450px; */
+  height: 350px;width: 330px;
+  background-color: rgb(180, 252, 179);
+  padding: 10px;
+  border: 2px solid rgb(33, 174, 127);border-radius: 10px;
+  display: flex;justify-content: space-between;align-items: center;flex-direction: column;
+
+}
+.CartPayHeading{font-size: 30px;color: rgb(33, 174, 127);text-align: center;}
+.CartBillpart{
+ height: fit-content;width: 98%;
+ background-color: #fff;border-radius: 10px;
+ padding: 1%;
+}
+.CartPaySideHeading{font-size:23px;color: #f8ae26;}
+.TableCost{width: 100%;} 
+.TableHead{text-align: left;}
+.tableData{text-align: center;}
+hr{height: 1px;width: 100%;border: none;background-color: rgb(33, 174, 127);;}
+.CartPaymentIcons{
+  height: fit-content;width: 100%;
+  display: flex;justify-content: space-around;align-items: center;
+  font-size: 40px;padding: 10px 0;border-radius: 10px;
+  background-color: #fff;
+}
+.CartPaymentQR{
+    height: 150px;width: 150px;
+}
+.CartPaymentQR img{height: 100%;width: 100%;border-radius: 10px;}
+.CartBuyButton{
+  height: 30px;width: fit-content;padding: 10px 20px;
+  display: flex;justify-content: center;align-items: center; 
+  background-color: white;color: red;
+  border-radius: 10px;font-size: 20px;font-weight: bold;
+  border: 2px solid red;
+  transition: all 1s;
+  position: relative;overflow: hidden;
+}
+.CartBuyButton:hover{
+  background-color: red;color: white;
+}
+
+.CartBuyButton::after{
+  content: "";
+  height: 120%;width: 0%; 
+  position: absolute; top: -15%; left: -15%;
+  border-radius: 25px; transform: rotate(30deg); box-shadow: 1px 1px 9px 4.5px white;
+}
+.CartBuyButton:hover::after{animation: Move_white_light 2s infinite;}
+@keyframes Move_white_light{0%{left: -15%;}100%{left: 115%;}}
+
+@media screen and (max-width:1060px) {
+  .TotalCartPage{
+    display: flex;justify-content: start;align-items: center;
+    flex-direction: column;gap: 20px;
+  }
+  .CartItemsShow{
+    width: 95%;
+  }
+}
+
+@media screen and (max-width:726px) {
+  .CartItemsList{
+    display: flex;justify-content: space-around;align-items: start;
+    flex-direction: row;
+    flex-wrap: wrap;
+  } 
+  .CartItemObj{
+    height: fit-content;width: 200px;
+    flex-direction: column;
+  }
+  .CartItemDetils{
+    align-items: center;
+  }
+  .CartItemTotalCost{
+    text-align: center;
+  }
+}
+@media screen and (max-width:426px) {
+  .CartItemsShow{
+    width: fit-content;
+  }
+}

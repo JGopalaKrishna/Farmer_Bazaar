@@ -1,0 +1,262 @@
+.daj{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.Fbase{
+    width:100%;
+    /* height:100svh; */
+    height:120svh; 
+    background:linear-gradient(to bottom right, #eaef5d, #4BAE74);
+}
+.Center{
+    width:95%;
+    height:95%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 1px 1px 2px 2px rgb(61, 61, 61,0.7);
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.Click{
+    width:10%;
+    height:10%;
+    background:linear-gradient(gold,goldenrod);
+    border-radius: 40px;
+    color:white;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.Rmain {
+  position: relative; /* Make .Rmain relative to enable absolute positioning of its children */
+  overflow: hidden;
+  width: 50%;
+  height: 90%;
+  border: 5px solid #4BAE74;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.curves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+}
+
+.c1, .c2, .c3, .c4, .c5 {
+  background: linear-gradient(to bottom right, #eaef5d, #4BAE74);
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+}
+
+.c1 { width: 20%; }
+.c2 { width: 30%; height: 80%; }
+.c3 { width: 35%; height: 90%; }
+.c4 { width: 22%; height: 85%; }
+
+.Rcenter , .Rcenter1 {
+  position: absolute;
+  z-index: 2;
+  width: 95%;
+  height: 90%;
+  background-color: rgba(128, 128, 128, 0.2);
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.row {
+  position: relative; 
+  overflow: hidden; 
+  width: 95%;
+  /* height: 10%; */
+  height: 50px;
+  background-color: white; 
+  display: flex;
+  flex-direction: row;
+  color: black;
+  font-size: 1.3rem;
+  /* justify-content: space-around; */
+  z-index: 1;
+}
+
+.row::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%; 
+  background: linear-gradient(to bottom right, #eaef5d, #4BAE74); 
+  z-index: -1; 
+  transform: scale(0); 
+  transition: transform 0.5s ease; 
+}
+
+.row:hover::before {
+  transform: scale(1); 
+}
+
+.row:hover {
+  box-shadow: none;
+  color:white;
+}
+
+
+
+.dname{
+  width:28%;
+  /* background-color: #4BAE74; */
+}
+.dcolon{
+  width:2%;
+  /* background-color: white; */
+}
+.detail{
+  width:70%;
+  /* background-color: #eaef5d; */
+}
+.detail input {
+  width: 100%;
+  padding: 5px;
+  height:100%;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+.detail input:focus {
+  background-color: #e0e0e0; 
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.message {
+  color: green;
+  font-size: 1rem;
+  text-align: center;
+}
+.Tologin{
+  width:50%;
+  height:40%;
+  /* background-color: #4BAE74; */
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.B1{
+  width:40%;
+  /* background-color: #e0e0e0; */
+  height:100%;
+  cursor: pointer;
+  color:blue;
+  border:none;
+  outline: none;
+  font-size: 1.2rem;
+  background-color: transparent;
+}
+.TL1{
+  width:50%;
+}
+.TL2{
+  width:15%;
+  font-size: 1rem;
+}
+.B1:hover{
+  color:white;
+}
+.TL2:hover{
+  color:white;
+}
+.button{
+  height:50%;
+}
+.row:hover{
+  box-shadow: 1px 1px 2px 2px black;
+}
+@media only screen and (min-width: 1200px)
+{
+  .Tologin{
+    width:65%;
+  }
+  .TL1 , .TL2{
+    font-size: 1.2rem;
+  }
+  .B1{
+    width:35%;
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px){
+  .row{
+    font-size: 1.2rem;
+  }
+  .Tologin{
+    width:80%;
+  }
+  .Rmain {
+    width: 60%;
+  }
+  .TL1 {
+    font-size: 0.8rem;
+  }
+  .B1{
+    width:35%;
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 800px){
+  .row{
+    font-size: 1rem;
+  }
+  .Tologin{
+    width:83%;
+  }
+  .Rmain {
+    width: 70%;
+  }
+  .B1{
+    width:35%;
+    font-size: 0.7rem;
+  }
+  .TL1 , .TL2{
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px){
+  .row{
+    font-size: 0.8rem;
+  }
+  .Tologin{
+    width:100%;
+  }
+  .Rmain {
+    width: 80%;
+  }
+  .TL1 , .TL2{
+    font-size: 0.7rem;
+  }
+  .TL1{
+    width:35%;
+  }
+  .Tl2{
+    width:30%;
+  }
+  .B1{
+    width:30%;
+    font-size: 0.7rem;
+  }
+}
