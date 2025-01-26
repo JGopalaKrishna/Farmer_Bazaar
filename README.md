@@ -1,4 +1,4 @@
-# Farmar_Bazaar_Project
+# Farmer_Bazaar_Project
 
  This Modules you need to install
 [React_Activet.pptx](https://github.com/user-attachments/files/18547173/React_Activet.pptx)
