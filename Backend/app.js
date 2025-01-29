@@ -10,8 +10,8 @@ const cors =require('cors');
 const CustomerRoute1 = require("./Routes/Routergk1");
 
 var app = express();
-
-mongoose.connect("mongodb+srv://gkfarmerbazaar:NuptchMKAMKUdsDc@cluster0.nrgbu.mongodb.net/")
+// in 14th line mongoose.connect("in UIUX_Data txtinfo.txt link will be their in last") => That link is main it is a DataBase(DB) link if it is not thier project. 
+mongoose.connect("")
 .then(result=>{console.log("connect successfully with DataBase of MongoDB")})
 .catch(err=>{console.log(err)})
 
