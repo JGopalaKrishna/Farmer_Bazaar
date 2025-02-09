@@ -1,4 +1,4 @@
-import { RouterFunfb } from "./fb/r1";
+import { RouterFunfb } from "./farmar_bazaar/Router";
 
 function App() {
   return (
@@ -7,5 +7,4 @@ function App() {
     </>
   )
 }
-
-export default App
+export default App;

@@ -8,10 +8,9 @@ import "./ProdectPageCss.css"
 
 
 
-export const Prodects_dispaly_Page=()=>{
-  // const location = useLocation();
-  // var UserName = [location.state];
-  // console.log(UserName);
+export const Products_dispaly_Page=()=>{
+  const location = useLocation();
+  
 
   const savedUser = localStorage.getItem("userData");
   var UserName =savedUser ? JSON.parse(savedUser) : null;
@@ -22,8 +21,8 @@ export const Prodects_dispaly_Page=()=>{
 
   const [filterApplyOnCategory,setfilterApplyOnCategory]=useState(false);
   const [filterApplyOnPrice,setfilterApplyOnPrice]=useState(false);
-  const [ProdectItems,setProdectItems]=useState([]);
-  const [AllProdectItems,setAllProdectItems]=useState([]);
+  const [ProductItems,setProductItems]=useState([]);
+  const [AllProductItems,setAllProductItems]=useState([]);
 
   useEffect(() => {
     const cards = document.querySelectorAll(".card");
@@ -39,12 +38,27 @@ export const Prodects_dispaly_Page=()=>{
     axios.post("http://localhost:9000/Dispaly-Products-Deatil-api",[UserName])
      .then((res)=>{
       // console.log(res.data);
-      setProdectItems(res.data);
-      setAllProdectItems(res.data);
+      setProductItems(res.data);
+      setAllProductItems(res.data);
      })
      .catch((err)=>console.log(err))
    },[]);
-  //  console.log(ProdectItems);
+
+  // searching by name and display
+  useEffect(() => {
+    if (location.state) {
+      const searchedValue = location.state.toLowerCase();
+      const filteredData = AllProductItems.filter((product) =>
+        product.ProductName.toLowerCase().includes(searchedValue) || product.ProductCategory.toLowerCase().includes(searchedValue)
+      );
+      setProductItems(filteredData);
+    }
+    else{
+      setProductItems(AllProductItems);
+    }
+  }, [location.state, AllProductItems]);
+  
+
 
   const FilterOnCategory=(category)=>{
     setCategoryNameForfilter(category);
@@ -58,9 +72,9 @@ export const Prodects_dispaly_Page=()=>{
   }
   const FilterToDisplay=(category,mincost,maxcost)=>{
     console.log("FilterToDisplay");
-    var updatedItemsC=AllProdectItems;
+    var updatedItemsC=AllProductItems;
     if(category!=null){
-      updatedItemsC = AllProdectItems.filter((product) => {
+      updatedItemsC = AllProductItems.filter((product) => {
         console.log("FilterToDisplayCategory")
         return product.ProductCategory === category;
       });
@@ -72,14 +86,14 @@ export const Prodects_dispaly_Page=()=>{
       });
     }
     console.log(updatedItemsC);
-    setProdectItems(updatedItemsC);
+    setProductItems(updatedItemsC);
   }
   const [selectedOptionCata, setSelectedOptionCata] = useState(null); // Initial null means no option is selected
   const handleChangeCata = (event) => {setSelectedOptionCata(event.target.value);};
   const [selectedOptionPrice, setSelectedOptionPrice] = useState(null); // Initial null means no option is selected
   const handleChangePrice = (event) => {setSelectedOptionPrice(event.target.value);};
   const RemoveFilter=()=>{
-    setProdectItems(AllProdectItems);
+    setProductItems(AllProductItems);
     setSelectedOptionCata(null);
     setSelectedOptionPrice(null);
     setfilterApplyOnCategory(false);
@@ -95,15 +109,15 @@ export const Prodects_dispaly_Page=()=>{
     .then((res)=>{console.log("res",res)})
     .catch((err)=>console.log(err))
     }
-    const updatedItems = ProdectItems.map((product) => {
+    const updatedItems = ProductItems.map((product) => {
       if (product.ProductId === product_id) {
         return { ...product, ProductAddToCart: true }; // Spread operator to avoid mutation
       }
       return product;
     });
     console.log("updatedItems",updatedItems);
-    setProdectItems(updatedItems);
-    setAllProdectItems(updatedItems);
+    setProductItems(updatedItems);
+    setAllProductItems(updatedItems);
 
   }
 
@@ -114,15 +128,15 @@ export const Prodects_dispaly_Page=()=>{
     .then((res)=>{console.log("res",res)})
     .catch((err)=>console.log(err))
     }
-    const updatedItems = ProdectItems.map((product) => {
+    const updatedItems = ProductItems.map((product) => {
       if (product.ProductId === product_id) {
         return { ...product, ProductAddToCart: false }; // Spread operator to avoid mutation
       }
       return product;
     });
     console.log("updatedItems",updatedItems);
-    setProdectItems(updatedItems);
-    setAllProdectItems(updatedItems);
+    setProductItems(updatedItems);
+    setAllProductItems(updatedItems);
   }
   
   return(
@@ -149,9 +163,9 @@ export const Prodects_dispaly_Page=()=>{
         <div className="FilterRemove" onClick={RemoveFilter}>❌</div>
       </section>
       <section className="ProdectsDisplayArea">
-      {ProdectItems.length>0?<>
+      {ProductItems.length>0?<>
      {
-      ProdectItems.map((Prodect)=>{
+      ProductItems.map((Prodect)=>{
         return(
           <div key={Prodect.ProductId} className="card" >
             {Prodect.ProductQuantity==1 ? <div className="OutofStockProdect"><p className="OutofStockProdectTextRorate">Out of Stock</p></div> :<></>}

@@ -2,7 +2,7 @@ const express = require("express");
 const nodemailer =require("nodemailer");
 const bodyParser=require("body-parser");
 
-const { CustomerDeatil: CustomerDeatilDB, CustomerCartDeatil:CustomerCartDeatilDB, ProdectsDeatil:ProdectsDeatilDB , FarmerOrderDeatil:FarmerOrderDeatilDB}=require("../Model/Schemas1");
+const { CustomerDeatil: CustomerDeatilDB, CustomerCartDeatil:CustomerCartDeatilDB, ProdectsDeatil:ProdectsDeatilDB , FarmerOrderDeatil:FarmerOrderDeatilDB}=require("../Model/All_in_one_Schemas");
 
 const MailSender= async (req,res,next)=>{
   var username=req.body[0];
@@ -98,12 +98,10 @@ const OrderToTake=async(req,res)=>{
     ])
     var Farmer_Email="";
     if(prodect_data[0].ProductSalers.length >0){
-      // console.log(prodect_data[0].ProductSalers[0].Email);
       Farmer_Email = prodect_data[0].ProductSalers[0].Email;
     }
     else{
       Farmer_Email="noFarmer@gmail.com";
-
     }
 
     var orderdata ={
@@ -117,9 +115,9 @@ const OrderToTake=async(req,res)=>{
     }
     try {
       // Check if the user already exists
-      // const farmerOrder = await FarmerOrderDeatilDB.findOne({ Email: Farmer_Email });
-      const farmerOrder = await FarmerOrderDeatilDB.find({ Email: Farmer_Email });
+      const farmerOrder = await FarmerOrderDeatilDB.findOne({ Email: Farmer_Email }).lean();
       // console.log("farmerOrder",farmerOrder)
+      // if (farmerOrder.length==0){
       if (!farmerOrder){
         // If user does not exist, create a new user and add the product
         const newCart = new FarmerOrderDeatilDB({
@@ -127,7 +125,7 @@ const OrderToTake=async(req,res)=>{
           Orders: [orderdata] // Add the new product to the array
         });
         await newCart.save();
-        // console.log('order placed saved');
+        console.log('order placed saved');
       } else {
           await FarmerOrderDeatilDB.updateOne(
             { Email: Farmer_Email },

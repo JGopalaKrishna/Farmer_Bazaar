@@ -41,7 +41,7 @@ body{
 
 .logo span {
     /* font-size: 32px; */
-    font-size: 42px;
+    font-size: 32px;
     font-weight: 550;
     /* color:#31CF60; */
     color:#ffffff;
@@ -56,7 +56,7 @@ body{
     border-radius: 7px;
     /* margin-top: 5px; */
     font-size: 20px;
-   
+   outline: none;padding-left: 5px;
 }
 ::placeholder{
     color: #C3C4C9;
@@ -66,7 +66,7 @@ body{
     font-size: 25px;
     color: #C3C4C9;
     position:absolute;
-    left: 25.5%;
+    left: 25%;
     top: 35%;
     margin-top: 4px;
     z-index: 1;

@@ -4,7 +4,7 @@ import { Slideshow } from "./Slideshow";
 export function HomePage1(){
   const savedUser = localStorage.getItem("userData");
   var username =savedUser ? JSON.parse(savedUser) : null;
-  console.log(username);
+  // console.log(username);
  return(
   <>  
    <div>

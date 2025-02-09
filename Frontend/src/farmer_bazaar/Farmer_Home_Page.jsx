@@ -10,6 +10,7 @@ import {FAQ} from './Faq';
 import './FarmerHomePage1.css' 
 import { useNavigate } from "react-router-dom";
 import VanillaTilt from 'vanilla-tilt';
+import { FaHome } from "react-icons/fa";
 
 
 //header.jsx
@@ -31,12 +32,14 @@ export function Header(props) {
                     <img src={Farmer} alt="Logo" />
                     <span className="logo-textt">Farmers Bazaar</span> 
                 </div>
+                <div style={{display:"flex",gap:10}}>
                 <div className="register-button">
-                    <button onClick={GotoHome}>Home</button>
+                    <button onClick={GotoHome}><FaHome size={25} style={{margin:0,padding:0}}/> <span className='RemoveHome_when_Phone_View'>Home</span></button>
                 </div>
 
                 <div className="register-button">
                     <button onClick={handleRegisterClick}> Register / Login</button>
+                </div>
                 </div>
             </header>
         </>

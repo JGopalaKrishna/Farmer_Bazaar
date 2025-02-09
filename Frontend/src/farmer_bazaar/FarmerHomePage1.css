@@ -27,6 +27,7 @@
 
 .register-button button {
   height: 50px;width: 200px;
+  height: fit-content; width: fit-content;
   padding: 10px 20px;
   font-size: 20px;
   background-color: #ffffff;
@@ -705,5 +706,6 @@ padding: 5px 10px;
   .logo-textt{
     display: none;
   }
+  .RemoveHome_when_Phone_View{display: none;}
 
 }

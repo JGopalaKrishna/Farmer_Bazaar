@@ -9,17 +9,17 @@ import "./ProdectPageCss.css"
 // Slide Images
 const slideImages = [
   {
-    url: 'https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
+    url: 'https://media.licdn.com/dms/image/v2/D5612AQH7TRwvcbGKYA/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1729782637847?e=2147483647&v=beta&t=JbMyXVDxQgW8oGmdft2UBLP6NsIwUk9E9ODuFq-5xdc',
     title: 'Farm Fresh Produce',
     description: 'Get the best quality produce directly from farms.',
   },
   {
-    url: 'https://images.unsplash.com/photo-1506710507565-203b9f24669b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80',
+    url: 'https://agriculturepost.com/wp-content/uploads/2022/12/Farmers-must-make-the-best-of-%E2%80%98farm-to-home-concept-700x400.jpg',
     title: 'Organic Vegetables',
     description: 'Fresh, organic vegetables at your doorstep.',
   },
   {
-    url: 'https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
+    url: 'https://www.sattvika.in/content/images/size/w2000/2023/08/WhatsApp-Image-2023-08-17-at-3.23.48-PM.jpeg',
     title: 'Supporting Farmers',
     description: 'Join hands to empower local farmers.',
   },

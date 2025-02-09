@@ -7,10 +7,9 @@ var logger = require('morgan');
 const mongoose = require('mongoose')
 const bodyParser =require('body-parser');
 const cors =require('cors');
-const CustomerRoute1 = require("./Routes/Routergk1");
+const CustomerRoute1 = require("./Routes/All_In_one_Router");
 
 var app = express();
-// in 14th line mongoose.connect("in UIUX_Data txtinfo.txt link will be their in last") => That link is main it is a DataBase(DB) link if it is not thier project. 
 mongoose.connect("")
 .then(result=>{console.log("connect successfully with DataBase of MongoDB")})
 .catch(err=>{console.log(err)})

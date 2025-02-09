@@ -204,6 +204,7 @@
   left: 10%;
   color: white;
   text-align: left;
+  backdrop-filter: blur(2px);padding: 10px;border-radius: 20px;
 }
 .text-overlay h1 {
   font-size: 3rem;

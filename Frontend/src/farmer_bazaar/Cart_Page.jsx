@@ -57,12 +57,17 @@ var UserName =savedUser ? JSON.parse(savedUser) : null;
   .then(()=>{console.log("Removed sucessfully");setForPageLoad(!ForPageLoad);})
   .catch((err)=>alert(err))
  }
+
+ const[BuyButton,setBuyButton]=useState("PURCHASE");
  const SendMailToUser = ()=>{
-  if(UserName==null)return alert("signup first")
+  if(UserName==null)return alert("signup first");
+  setBuyButton("Loading...");
   axios.post("http://localhost:9000/mail-sender-api",[UserName])
-  .then((res)=>{alert("Check your Mail");
+  .then((res)=>{
+    alert("Check your Mail");
+    setBuyButton("Completed");
     axios.post("http://localhost:9000/Order-ToTake-api",[UserName])
-    .then((res)=>console.log(res))
+    .then((res)=> setBuyButton("PURCHASE"))
     .catch((err)=>alert(err))
   })
   .catch((err)=>alert(err.message))
@@ -121,7 +126,7 @@ var UserName =savedUser ? JSON.parse(savedUser) : null;
      </div> */}
      {/* <div className="CartPaymentQR"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoXgnU7FduTcy0Z7GyoXnMnCqLBwMwAXdiFw&s" /></div> */}
      {/* <div className="CartBuyButton" onClick={()=>{alert("Payment Applications is Not Available in Your Devise")}}>Pay Securely with {PayAPP}</div> */}
-     <div className="CartBuyButton" onClick={SendMailToUser}>PURCHASE</div>
+     <div className="CartBuyButton" onClick={SendMailToUser}>{BuyButton}</div>
     </section>
    </main>
    <br/>

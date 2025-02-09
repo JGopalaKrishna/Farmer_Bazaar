@@ -19,12 +19,14 @@ export const Navbar = () => {
   // localStorage.setItem("userData", JSON.stringify(username));
   const savedUser = localStorage.getItem("userData");
   var username =savedUser ? JSON.parse(savedUser) : null;
-  const [change, setChange] = useState('');
+  const [SearchValue, setSearchValue] = useState('');
   const [menuOpen, setMenuOpen] = useState(false); 
   const mobileMenuRef = useRef(null);
 
   const iconnone = (val) => {
-    setChange(val);
+    setSearchValue(val);
+    // console.log(val);
+    navigate("/ProductPage", { state: val });
   };
 
   const togglemenu = () => {
@@ -45,14 +47,14 @@ const ForGocart=()=>{
 const [InPage,setPage]=useState(true);
 
 const ChangeColor_NavHome=()=>{
-console.log("ChangeColor_NavHome")
+// console.log("ChangeColor_NavHome")
 setPage(true);
 navigate("/", { state:  username  });
 }
 const ChangeColor_NavProdect=()=>{
-  console.log("ChangeColor_NavProdect")
+  // console.log("ChangeColor_NavProdect")
   setPage(false);
-  navigate("/ProdectPage", { state:  username  });
+  navigate("/ProductPage", { state:  ""  });
 }
 const BecomeAfarmer=()=>{
   console.log("ChangeColor_NavProdect")
@@ -67,15 +69,15 @@ const BecomeAfarmer=()=>{
         <img src={img} alt='farmers bazaar logo' />
         <span>Farmers Bazaar</span>
       </div>
-      {/* <div className={styles.searchWrapper}>
-        <CiSearch className={styles.seicon} id="seicon" style={{ display: change.length === 0 ? 'block' : 'none' }}/>
+      <div className={styles.searchWrapper}>
+        <CiSearch className={styles.seicon} id="seicon" style={{ display: SearchValue.length === 0 ? 'block' : 'none' }}/>
         <input
           type='text'
-          placeholder='      search...'
+          placeholder='    search...'
           className={styles.search}
           onChange={(event) => iconnone(event.target.value)}
         /> 
-      </div> */}
+      </div>
       <div className={styles.navoptions}>
 
         <div onClick={ChangeColor_NavHome} style={{color: InPage ? "green" : "white" }}>

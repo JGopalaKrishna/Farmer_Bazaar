@@ -5,8 +5,8 @@ import { UserLogIn_signup } from "./Login_signUpUser";
 
 import { HeaderAndFooter } from "./Hader_Footer";
 import { HomePage1 } from "./HomePage1";
-import { CartDispaly } from "./Cartpage";
-import { Prodects_dispaly_Page } from "./ProdectPage";
+import { CartDispaly } from "./Cart_Page";
+import { Products_dispaly_Page } from "./ProductPage";
 
 import { FarmerOnePage } from "./farmerone";
 import { Registration } from "./FRegForm";
@@ -29,7 +29,7 @@ export function RouterFunfb(){
           <Route path="/" element={<HeaderAndFooter/>}>
             <Route index element={<HomePage1 />} />
             <Route path="/CartPage" element={<CartDispaly/>} />
-            <Route path="/ProdectPage" element={<Prodects_dispaly_Page/>} />
+            <Route path="/ProductPage" element={<Products_dispaly_Page/>} />
           </Route>
 
         </Routes> 

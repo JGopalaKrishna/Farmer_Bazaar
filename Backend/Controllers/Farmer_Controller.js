@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser=require("body-parser");
 
-const {FarmersDeatil:FarmersDeatilDB ,FarmerSaleDeatil:FarmerSaleDeatilDB ,ProdectsDeatil:ProdectsDeatilDB} = require("../Model/Schemas1");
+const {FarmersDeatil:FarmersDeatilDB ,FarmerSaleDeatil:FarmerSaleDeatilDB ,ProdectsDeatil:ProdectsDeatilDB} = require("../Model/All_in_one_Schemas");
 const Adding_FarmersDeatil = async (req, res) => {
     // console.log("Adding_CustomerDeatil");
     const data = req.body;

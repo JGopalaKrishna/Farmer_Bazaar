@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser=require("body-parser");
 
-const { CustomerDeatil: CustomerDeatilDB, CustomerCartDeatil:CustomerCartDeatilDB, ProdectsDeatil:ProdectsDeatilDB}=require("../Model/Schemas1");
+const { CustomerDeatil: CustomerDeatilDB, CustomerCartDeatil:CustomerCartDeatilDB, ProdectsDeatil:ProdectsDeatilDB}=require("../Model/All_in_one_Schemas");
 
 
 const sampleControll= async(req,res)=>{
@@ -155,8 +155,8 @@ const addOrUpdateCart= async (req,res )=>{
  var data = req.body;
  var { UserName: username, ProductId: productid } = data;
  const userCartPId = await CustomerDeatilDB.updateOne(
-    { UserName: username}, // The filter to find the document
-    { $addToSet: { CartItemsid: productid } } // Push the new string into the 'tags' array
+    { UserName: username},
+    { $addToSet: { CartItemsid: productid } }
   );
  var productdata=await ProdectsDeatilDB.aggregate([
     {
